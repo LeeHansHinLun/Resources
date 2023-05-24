@@ -13,5 +13,10 @@
         "name": "Company C",
         "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
         "url": "https://example.com/companyC"
+    },
+    {
+        "name": "Company D",
+        "description": "Testing 123\n1234",
+        "url": "https://example.com/companyD"
     }
 ]
