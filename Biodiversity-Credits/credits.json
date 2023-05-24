@@ -1,0 +1,17 @@
+[
+    {
+        "name": "Company A",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "url": "https://example.com/companyA"
+    },
+    {
+        "name": "Company B",
+        "description": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "url": "https://example.com/companyB"
+    },
+    {
+        "name": "Company C",
+        "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "url": "https://example.com/companyC"
+    }
+]
