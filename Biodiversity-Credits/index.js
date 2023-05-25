@@ -1,6 +1,14 @@
 fetch('credits.json')
     .then(response => response.json())
-    .then(data => generateCredits(data));
+    .then(data => {
+        // Process the data and replace \n with <br> tags
+        data.forEach(credit => {
+            credit.description = credit.description.replace(/\n/g, '<br>');
+        });
+
+        // Generate the credits
+        generateCredits(data);
+    });
 
 function generateCredits(creditsData) {
     const creditsContainer = document.getElementById('credits-container');
@@ -13,7 +21,7 @@ function generateCredits(creditsData) {
         heading.textContent = credit.name;
 
         const description = document.createElement('p');
-        description.textContent = credit.description;
+        description.innerHTML = credit.description;
 
         const button = document.createElement('a');
         button.classList.add('button');
@@ -28,3 +36,16 @@ function generateCredits(creditsData) {
         creditsContainer.appendChild(creditElement);
     });
 }
+
+// Dark Mode (Or else my eyes would burn)
+document.addEventListener('DOMContentLoaded', () => {
+    const toggleButton = document.getElementById('toggle-button');
+    const creditsContainer = document.getElementById('credits-container');
+    const body = document.body;
+
+    toggleButton.addEventListener('click', () => {
+        body.classList.toggle('dark-mode');
+        creditsContainer.classList.toggle('dark-mode');
+        toggleButton.classList.toggle('dark-mode');
+    });
+});
